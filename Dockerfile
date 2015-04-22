@@ -11,7 +11,6 @@ RUN buildDeps='build-essential \
   && apt-get install -yq $buildDeps \
                          ca-certificates \
                          python \
-                         git-core \
   && pip install --upgrade pip \
   && /usr/local/bin/pip install --upgrade acora \
                                           argparse \
