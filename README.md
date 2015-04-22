@@ -11,7 +11,7 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 $ docker images
 
 REPOSITORY                 TAG           VIRTUAL SIZE
-blacktop/rekall            latest        390.1 MB
+blacktop/rekall            latest        416.4 MB
 ```
 
 ### Installation
