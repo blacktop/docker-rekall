@@ -1,4 +1,4 @@
-#![rekall-logo](http://www.rekall-forensic.com/img/Rekall.png) Dockerfile
+#![rekall-logo](https://raw.githubusercontent.com/blacktop/docker-rekall/master/rekall-logo.png)  Dockerfile
 
 This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic.com/index.html) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/blacktop/rekall/) published to the public [Docker Registry](https://index.docker.io/).
 
