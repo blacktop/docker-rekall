@@ -10,6 +10,7 @@ RUN buildDeps='build-essential \
   && apt-get update -qq \
   && apt-get install -yq $buildDeps \
                          ca-certificates \
+                         git-core \
                          python \
   && pip install --upgrade pip \
   && /usr/local/bin/pip install --upgrade acora \
@@ -41,7 +42,9 @@ RUN buildDeps='build-essential \
 
 # Install Rekall and remove install dir after to conserve space
 RUN /usr/local/bin/pip install --pre rekall \
+  && git clone --depth 1 https://github.com/google/rekall-profiles.git \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+COPY rekallrc /root/.rekallrc
 
 # Define mountable directories.
 VOLUME ["/data"]
