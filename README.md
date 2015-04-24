@@ -11,7 +11,8 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 $ docker images
 
 REPOSITORY                 TAG           VIRTUAL SIZE
-blacktop/rekall            latest        416.4 MB
+blacktop/rekall            latest         416.4 MB
+blacktop/rekall            w_profiles     707.2 MB
 ```
 
 ### Installation
@@ -58,6 +59,8 @@ _EPROCESS          Name          PID   PPID   Thds    Hnds    Sess  Wow64       
 0x80f1b020 IEXPLORE.EXE          1884   1724      9      351      0 False  2010-08-15 18:54:05+0000 -
 0xff143b28 TPAutoConnSvc.e       1968    676      5      100      0 False  2010-08-11 06:06:39+0000 - 2010-08-15 19:01:51 UTC+0000
 ```
+
+> Note: To use rekall **offline** use `blacktop/rekall:w_profiles`
 
 ### To Run on OSX
  - Install [Homebrew](http://brew.sh)
