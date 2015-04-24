@@ -43,7 +43,7 @@ RUN buildDeps='build-essential \
 # Install Rekall and remove install dir after to conserve space
 RUN /usr/local/bin/pip install --pre rekall \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-COPY rekallrc /root/.rekallrc
+# COPY rekallrc /root/.rekallrc
 
 # Define mountable directories.
 VOLUME ["/data"]
