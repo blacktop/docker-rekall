@@ -33,7 +33,7 @@ RUN buildDeps='build-base \
                   setuptools \
                   tornado \
                   wsgiref \
-  && echo "Installing Rekall and profiles..."
+  && echo "Installing Rekall and profiles..." \
   && pip install --pre rekall \
   && git clone --depth 1 https://github.com/google/rekall-profiles.git /rekall-profiles \
   && apk del --purge $buildDeps \
