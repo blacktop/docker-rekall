@@ -6,6 +6,9 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 * [blacktop/yara](https://registry.hub.docker.com/u/blacktop/yara/)
 
+### Image Size
+[![](https://badge.imagelayers.io/blacktop/rekall:w_profiles.svg)](https://imagelayers.io/?images=blacktop/rekall:w_profiles 'Get your own badge on imagelayers.io')
+
 ### Image Tags
 ```bash
 $ docker images
