@@ -6,6 +6,9 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 * [blacktop/yara](https://registry.hub.docker.com/u/blacktop/yara/)
 
+### Image Size
+[![](https://badge.imagelayers.io/blacktop/rekall:latest.svg)](https://imagelayers.io/?images=blacktop/rekall:latest 'Get your own badge on imagelayers.io')
+
 ### Image Tags
 ```bash
 $ docker images
@@ -30,7 +33,7 @@ $ docker build -t blacktop/rekall github.com/blacktop/docker-rekall
 $ docker run -i -t -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem pslist
 ```
 #### Output:
-![pslist-example](https://raw.githubusercontent.com/blacktop/docker-rekall/master/pslist_example.gif) 
+![pslist-example](https://raw.githubusercontent.com/blacktop/docker-rekall/master/pslist_example.gif)
 
 > Note: To use rekall **offline** use `blacktop/rekall:w_profiles`
 
@@ -51,8 +54,3 @@ Add the following to your bash or zsh profile
 ```bash
 alias rekall='docker run -it --rm -v $(pwd):/data:rw blacktop/rekall $@'
 ```
-
-### Todo
-- [x] Install/Run rekall
-- [ ] Start Daemon and watch folder with supervisord
-- [ ] Have container take a URL as input and download/scan memory dump
