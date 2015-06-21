@@ -33,7 +33,7 @@ RUN buildDeps='build-base \
                   setuptools \
                   tornado \
                   wsgiref \
-  && echo "Installing Rekall..."
+  && echo "Installing Rekall..." \
   && pip install --pre rekall \
   && apk del --purge $buildDeps \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/*
