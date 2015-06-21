@@ -14,8 +14,8 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 $ docker images
 
 REPOSITORY                 TAG           VIRTUAL SIZE
-blacktop/rekall            latest         416.4 MB
-blacktop/rekall            w_profiles     707.2 MB
+blacktop/rekall            latest         114 MB
+blacktop/rekall            w_profiles     485 MB
 ```
 
 ### Installation
@@ -44,10 +44,9 @@ $ docker run -i -t -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem
 $ brew install cask
 $ brew cask install virtualbox
 $ brew install docker
-$ brew install boot2docker
-$ boot2docker init
-$ boot2docker up
-$ $(boot2docker shellinit)
+$ brew install docker-machine
+$ docker-machine create --driver virtualbox dev
+$ eval $(docker-machine env dev)
 ```
 Add the following to your bash or zsh profile
 
