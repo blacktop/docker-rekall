@@ -36,7 +36,7 @@ RUN buildDeps='build-base \
   && echo "Installing Rekall..." \
   && pip install --pre rekall \
   && apk del --purge $buildDeps \
-  && rm -rf /tmp/* /root/.cache /var/cache/apk/*
+  && rm -rf /tmp/* /root/.cache /var/cache/apk/* \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # COPY rekallrc /root/.rekallrc
