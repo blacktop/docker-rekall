@@ -37,8 +37,7 @@ RUN buildDeps='build-base \
   && pip install --pre rekall \
   && git clone --depth 1 https://github.com/google/rekall-profiles.git /rekall-profiles \
   && apk del --purge $buildDeps \
-  && rm -rf /tmp/* /root/.cache /var/cache/apk/* \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/*
 
 COPY rekallrc /root/.rekallrc
 
