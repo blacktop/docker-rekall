@@ -9,7 +9,7 @@ RUN buildDeps='build-base \
                py-pip' \
   && set -x \
   && apk --update add ca-certificates python $buildDeps \
-  && pip install --upgrade pip \
+  && pip install --upgrade pip setuptools \
   && pip install acora \
                   argparse \
                   astroid \
