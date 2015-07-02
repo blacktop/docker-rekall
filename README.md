@@ -15,7 +15,7 @@ $ docker images
 
 REPOSITORY                 TAG           VIRTUAL SIZE
 blacktop/rekall            latest         115 MB
-blacktop/rekall            w_profiles     485 MB
+blacktop/rekall            w_profiles     487 MB
 ```
 
 ### Installation
