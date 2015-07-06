@@ -41,7 +41,7 @@ $ docker run -i -t -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem
  - Install [Homebrew](http://brew.sh)
 
 ```bash
-$ brew install cask
+$ brew install caskroom/cask/brew-cask
 $ brew cask install virtualbox
 $ brew install docker
 $ brew install docker-machine
