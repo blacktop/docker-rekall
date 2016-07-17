@@ -3,41 +3,41 @@ FROM blacktop/yara
 MAINTAINER blacktop, https://github.com/blacktop
 
 # Install Rekall Dependancies
-RUN buildDeps='build-base \
-               git \
-               python-dev \
-               py-pip' \
+RUN apk-install ca-certificates py-setuptools
+RUN apk-install -t build-deps build-base \
+                              git \
+                              python-dev \
+                              py-pip \
   && set -x \
-  && apk --update add ca-certificates py-setuptools $buildDeps \
-  && pip install --upgrade pip setuptools \
-  && pip install acora \
-                  argparse \
-                  astroid \
-                  codegen \
-                  distorm3 \
-                  Flask \
-                  Flask-Sockets \
-                  gevent \
-                  gevent-websocket \
-                  intervaltree \
-                  ipython \
-                  Jinja2 \
-                  MarkupSafe \
-                  PyAFF4 \
-                  pycrypto \
-                  pyelftools \
-                  Pygments \
-                  pytz \
-                  PyYAML \
-                  pyzmq \
-                  setuptools \
-                  tornado \
-                  wsgiref \
-  && echo "Installing Rekall and profiles..." \
+  && export PIP_NO_CACHE_DIR=off \
+  && export PIP_DISABLE_PIP_VERSION_CHECK=on \
+  && pip install --upgrade pip wheel \
+  && pip install pytz \
+                 Flask \
+                 acora \
+                 pyzmq \
+                 Jinja2 \
+                 PyAFF4 \
+                 PyYAML \
+                 gevent \
+                 astroid \
+                 codegen \
+                 ipython \
+                 tornado \
+                 wsgiref \
+                 Pygments \
+                 argparse \
+                 distorm3 \
+                 pycrypto \
+                 MarkupSafe \
+                 pyelftools \
+                 intervaltree \
+                 Flask-Sockets \
+                 gevent-websocket \
+  && echo "Installing Rekall..." \
   && pip install --pre rekall \
-  && git clone --depth 1 https://github.com/google/rekall-profiles.git /rekall-profiles \
-  && apk del --purge $buildDeps \
-  && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/*
+  && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
+  && apk del --purge build-deps
 
 COPY rekallrc /root/.rekallrc
 
