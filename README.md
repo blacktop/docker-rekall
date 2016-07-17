@@ -25,16 +25,10 @@ blacktop/rekall            w_profiles     487 MB
 
 2.	Download [trusted build](https://index.docker.io/u/blacktop/rekall/) from public [Docker Registry](https://index.docker.io/): `docker pull blacktop/rekall`
 
-#### Alternatively, build an image from Dockerfile
-
-```bash
-$ docker build -t blacktop/rekall github.com/blacktop/docker-rekall
-```
-
 ### Usage
 
 ```bash
-$ docker run -i -t -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem pslist
+$ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem pslist
 ```
 
 #### Output:
