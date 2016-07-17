@@ -41,10 +41,8 @@ RUN apk-install -t build-deps build-base \
 
 COPY rekallrc /root/.rekallrc
 
-# Define mountable directories.
 VOLUME ["/data"]
 
-# Define working directory.
 WORKDIR /data
 
 ENTRYPOINT ["rekall"]
