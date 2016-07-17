@@ -3,12 +3,12 @@ FROM blacktop/yara
 MAINTAINER blacktop, https://github.com/blacktop
 
 # Install Rekall Dependancies
-RUN buildDeps='build-base \
-               git \
-               python-dev \
-               py-pip' \
+RUN apk-install ca-certificates py-setuptools
+RUN apk-install -t build-deps build-base \
+                              git \
+                              python-dev \
+                              py-pip \
   && set -x \
-  && apk --update add ca-certificates py-setuptools $buildDeps \
   && export PIP_NO_CACHE_DIR=off \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
   && pip install --upgrade pip wheel \
@@ -36,8 +36,8 @@ RUN buildDeps='build-base \
                  gevent-websocket \
   && echo "Installing Rekall..." \
   && pip install --pre rekall \
-  && apk del --purge $buildDeps \
-  && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/*
+  && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
+  && apk del --purge build-deps
 
 # COPY rekallrc /root/.rekallrc
 

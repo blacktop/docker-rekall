@@ -1,5 +1,5 @@
-![rekall-logo](https://raw.githubusercontent.com/blacktop/docker-rekall/master/rekall-logo.png) Dockerfile
-==========================================================================================================
+![rekall-logo](https://raw.githubusercontent.com/blacktop/docker-rekall/master/logo.png) Dockerfile
+===================================================================================================
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/)
 
