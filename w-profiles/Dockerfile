@@ -6,12 +6,14 @@ ENV REKALL_VERSION v1.5.2
 
 # Install Rekall Dependancies
 RUN apk-install py-setuptools bash
-RUN apk-install -t build-deps py-pip \
-                              build-base \
-                              python-dev \
-                              ncurses-dev \
-                              readline-dev \
-                              ca-certificates \
+RUN apk-install -t .build-deps \
+                    git \
+                    py-pip \
+                    build-base \
+                    python-dev \
+                    ncurses-dev \
+                    readline-dev \
+                    ca-certificates \
   && set -x \
   && export PIP_NO_CACHE_DIR=off \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
@@ -21,7 +23,7 @@ RUN apk-install -t build-deps py-pip \
   && echo "Installing rekall-profiles..." \
   && git clone --depth 1 https://github.com/google/rekall-profiles.git \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
-  && apk del --purge build-deps
+  && apk del --purge .build-deps
 
 COPY rekallrc /root/.rekallrc
 
