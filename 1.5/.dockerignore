@@ -6,3 +6,7 @@ LICENSE
 *.vmem
 logo.png
 pslist_example.gif
+README.md.bu
+build
+release
+Makefile

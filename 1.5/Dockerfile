@@ -1,4 +1,4 @@
-FROM blacktop/yara
+FROM blacktop/yara:3.4
 
 MAINTAINER blacktop, https://github.com/blacktop
 
@@ -18,12 +18,10 @@ RUN apk-install -t build-deps py-pip \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge build-deps
 
-# COPY rekallrc /root/.rekallrc
-
 VOLUME ["/data"]
 
 WORKDIR /data
 
-ENTRYPOINT ["rekall"]
+ENTRYPOINT ["gosu","nobody","/sbin/tini","--","rekall"]
 
 CMD ["-h"]

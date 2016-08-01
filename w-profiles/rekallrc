@@ -2,4 +2,4 @@ cache_dir: .rekall_cache
 notebook_dir: /root
 profile_path:
    - https://raw.githubusercontent.com/google/rekall-profiles
-   - http://profiles.rekall-forensic.com
+   - /rekall-profiles
