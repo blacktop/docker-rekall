@@ -1,4 +1,4 @@
-![rekall-logo](https://raw.githubusercontent.com/blacktop/docker-rekall/master/logo.png) Dockerfile
+![rekall-logo](https://github.com/blacktop/docker-rekall/raw/master/docs/logo.png) Dockerfile
 ===================================================================================================
 
 [![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall)
@@ -31,7 +31,7 @@ blacktop/rekall            w_profiles     487 MB
 $ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem pslist
 ```
 
-![pslist-example](https://raw.githubusercontent.com/blacktop/docker-rekall/master/pslist_example.gif)
+![pslist-example](https://github.com/blacktop/docker-rekall/raw/master/docs/pslist_example.gif)
 
 ##### To use **blacktop/rekall** like a host binary
 
