@@ -19,7 +19,7 @@ blacktop/rekall     1.5                 84.8  MB
 blacktop/rekall     profiles            1.923 GB
 ```
 
-> NOTE: To use rekall **offline** use `blacktop/rekall:w_profiles`
+> NOTE: To use rekall **offline** use `blacktop/rekall:profiles`
 
 ### Installation
 
