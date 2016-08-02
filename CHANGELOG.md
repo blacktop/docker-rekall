@@ -3,12 +3,16 @@ Change Log
 
 All notable changes to this project will be documented in this file.
 
-[latest] -
+[latest] - 2016-07-29
 ------------------------
 
 ### Fixed
 
 ### Added
+
+- rekall-gui
+-	krallin/tini
+-	tianon/gosu
 
 ### Removed
 
@@ -21,6 +25,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- rekall-gui
 -	krallin/tini
 -	tianon/gosu
 
