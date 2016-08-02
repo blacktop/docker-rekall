@@ -1,9 +1,7 @@
 ![rekall-logo](https://github.com/blacktop/docker-rekall/raw/master/docs/logo.png) Dockerfile
-===================================================================================================
+=============================================================================================
 
-[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall)
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/)
-[![Docker Image](https://img.shields.io/badge/docker image-84.8 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
+[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-84.8 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
 
 This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic.com/index.html).
 
@@ -15,11 +13,12 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 ```bash
 REPOSITORY          TAG                 SIZE
-blacktop/rekall     latest              84.8 MB
-blacktop/rekall     1.5.2               84.8 MB
-blacktop/rekall     1.5                 84.8 MB
-blacktop/rekall     profiles            84.8 MB
+blacktop/rekall     latest              84.8  MB
+blacktop/rekall     1.5.2               84.8  MB
+blacktop/rekall     1.5                 84.8  MB
+blacktop/rekall     profiles            1.923 GB
 ```
+
 > NOTE: To use rekall **offline** use `blacktop/rekall:w_profiles`
 
 ### Installation
