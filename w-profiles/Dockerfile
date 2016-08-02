@@ -20,6 +20,8 @@ RUN apk-install -t .build-deps \
   && pip install --upgrade pip wheel setuptools \
   && echo "Installing Rekall..." \
   && LDFLAGS=-L/lib pip install https://github.com/google/rekall/archive/$REKALL_VERSION.zip \
+  && echo "Installing Rekall GUI..." \
+  && pip install rekall-gui \  
   && echo "Installing rekall-profiles..." \
   && cd /tmp \
   && wget https://github.com/google/rekall-profiles/archive/gh-pages.zip \

@@ -16,6 +16,8 @@ RUN apk-install -t build-deps py-pip \
   && pip install --upgrade pip wheel setuptools \
   && echo "Installing Rekall..." \
   && LDFLAGS=-L/lib pip install https://github.com/google/rekall/zipball/master \
+  && echo "Installing Rekall GUI..." \
+  && pip install rekall-gui \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge build-deps
 
