@@ -7,7 +7,7 @@ ENV REKALL_VERSION v1.5.2
 # Install Rekall Dependancies
 RUN apk-install py-setuptools bash
 RUN apk-install -t .build-deps \
-                    git \
+                    unzip \
                     py-pip \
                     build-base \
                     python-dev \
@@ -21,7 +21,10 @@ RUN apk-install -t .build-deps \
   && echo "Installing Rekall..." \
   && LDFLAGS=-L/lib pip install https://github.com/google/rekall/archive/$REKALL_VERSION.zip \
   && echo "Installing rekall-profiles..." \
-  && git clone --depth 1 https://github.com/google/rekall-profiles.git \
+  && cd /tmp \
+  && wget https://github.com/google/rekall-profiles/archive/gh-pages.zip \
+  && unzip gh-pages.zip \
+  && mv 1.0 /rekall-profiles \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge .build-deps
 
