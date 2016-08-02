@@ -39,7 +39,7 @@ $ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.v
 #### Rekall GUI
 
 ```bash
- $ docker run -d -p 80:80 -v /path/to/mem:/data:ro blacktop/rekall webconsole --worksheet /tmp --host 0.0.0.0 --port 8000
+ $ docker run -d -p 80:8000 -v /path/to/mem:/data:ro blacktop/rekall webconsole --worksheet /tmp --host 0.0.0.0 --port 8000
 ```
 
 ![gui-home](https://github.com/blacktop/docker-rekall/raw/master/docs/gui-home.png)
