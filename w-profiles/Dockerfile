@@ -24,6 +24,7 @@ RUN apk-install -t .build-deps \
   && cd /tmp \
   && wget https://github.com/google/rekall-profiles/archive/gh-pages.zip \
   && unzip gh-pages.zip \
+  && cd rekall-profiles-gh-pages \
   && mv v1.0 /rekall-profiles \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge .build-deps
