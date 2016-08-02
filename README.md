@@ -1,7 +1,7 @@
 ![rekall-logo](https://github.com/blacktop/docker-rekall/raw/master/docs/logo.png) Dockerfile
 =============================================================================================
 
-[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-84.8 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
+[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-105.5 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
 
 This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic.com/index.html).
 
@@ -33,6 +33,18 @@ $ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.v
 ```
 
 ![pslist-example](https://github.com/blacktop/docker-rekall/raw/master/docs/pslist_example.gif)
+
+### Documentation
+
+#### Rekall GUI
+
+```bash
+ $ docker run -d -p 80:80 -v /path/to/mem:/data:ro blacktop/rekall webconsole --worksheet /tmp --host 0.0.0.0 --port 8000
+```
+
+![gui-home](https://github.com/blacktop/docker-rekall/raw/master/docs/gui-home.png)
+
+![gui-silentbanker](https://github.com/blacktop/docker-rekall/raw/master/docs/gui-silentbanker.png)
 
 ##### To use **blacktop/rekall** like a host binary
 
