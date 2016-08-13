@@ -11,6 +11,7 @@ RUN apk-install -t build-deps py-pip \
                               python-dev \
                               ncurses-dev \
                               readline-dev \
+                              linux-headers \
                               ca-certificates \
   && set -x \
   && export PIP_NO_CACHE_DIR=off \
