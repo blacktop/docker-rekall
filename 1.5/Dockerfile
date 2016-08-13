@@ -2,7 +2,7 @@ FROM blacktop/yara:3.4
 
 MAINTAINER blacktop, https://github.com/blacktop
 
-ENV REKALL_VERSION v1.5.2
+ENV REKALL_VERSION v1.5.3
 
 # Install Rekall Dependancies
 RUN apk-install py-setuptools bash
@@ -19,7 +19,7 @@ RUN apk-install -t build-deps py-pip \
   && echo "Installing Rekall..." \
   && LDFLAGS=-L/lib pip install https://github.com/google/rekall/archive/$REKALL_VERSION.zip \
   && echo "Installing Rekall GUI..." \
-  && pip install rekall-gui \  
+  && pip install rekall-gui \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge build-deps
 
