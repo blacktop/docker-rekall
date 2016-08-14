@@ -1,4 +1,4 @@
-FROM blacktop/yara:3.4
+FROM blacktop/yara:3.5
 
 MAINTAINER blacktop, https://github.com/blacktop
 
@@ -9,6 +9,7 @@ RUN apk-install -t build-deps py-pip \
                               python-dev \
                               ncurses-dev \
                               readline-dev \
+                              linux-headers \
                               ca-certificates \
   && set -x \
   && export PIP_NO_CACHE_DIR=off \
