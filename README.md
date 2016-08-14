@@ -13,10 +13,10 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 ```bash
 REPOSITORY          TAG                 SIZE
-blacktop/rekall     latest              105.5 MB
-blacktop/rekall     1.5.2               98.06 MB
-blacktop/rekall     1.5                 98.06 MB
-blacktop/rekall     profiles            1.936 GB
+blacktop/rekall     latest              112.3 MB
+blacktop/rekall     1.5.3               112.3 MB
+blacktop/rekall     1.5                 112.3 MB
+blacktop/rekall     profiles            1.972 GB
 ```
 
 > NOTE: To use rekall **offline** use `blacktop/rekall:profiles`
