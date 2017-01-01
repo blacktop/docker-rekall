@@ -4,11 +4,11 @@ MAINTAINER blacktop, https://github.com/blacktop
 
 ENV REKALL_VERSION 1.6.0
 
-# Install Rekall Dependancies
-RUN apk-install py-setuptools py-cffi bash
+RUN apk-install py-setuptools py-cffi libstdc++ bash
 RUN apk-install -t .build-deps \
                     unzip \
                     py-pip \
+                    libc-dev \
                     build-base \
                     python-dev \
                     ncurses-dev \
@@ -21,14 +21,12 @@ RUN apk-install -t .build-deps \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
   && pip install --upgrade pip wheel setuptools \
   && echo "===> Installing Rekall..." \
-  && LDFLAGS=-L/lib pip install rekall==$REKALL_VERSION rekall-agent==$REKALL_VERSION \
-  && echo "===> Installing Rekall GUI..." \
-  && pip install rekall-gui \
+  && pip install rekall==$REKALL_VERSION rekall-agent==$REKALL_VERSION \
   && echo "===> Installing rekall-profiles..." \
   && cd /tmp \
-  && wget https://github.com/google/rekall-profiles/archive/gh-pages.zip \
-  && unzip gh-pages.zip \
-  && cd rekall-profiles-gh-pages \
+  && wget https://github.com/google/rekall-profiles/archive/master.zip \
+  && unzip master.zip \
+  && cd rekall-profiles-master \
   && mv v1.0 /rekall-profiles \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge .build-deps
@@ -38,5 +36,5 @@ COPY rekallrc /root/.rekallrc
 VOLUME ["/data"]
 WORKDIR /data
 
-ENTRYPOINT ["su-exec","nobody","/sbin/tini","--","rekall"]
+ENTRYPOINT ["/sbin/tini","--","rekall"]
 CMD ["-h"]

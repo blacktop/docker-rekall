@@ -1,5 +1,5 @@
 cache_dir: .rekall_cache
 notebook_dir: /root
 profile_path:
-   - https://raw.githubusercontent.com/google/rekall-profiles
-   - /rekall-profiles
+  - /rekall-profiles
+  - https://raw.githubusercontent.com/google/rekall-profiles/master

@@ -5,9 +5,10 @@ MAINTAINER blacktop, https://github.com/blacktop
 ENV REKALL_VERSION 1.5.3
 
 # Install Rekall Dependancies
-RUN apk-install py-setuptools py-cffi bash
+RUN apk-install py-setuptools py-cffi libstdc++ bash
 RUN apk-install -t .build-deps \
                     py-pip \
+                    libc-dev \
                     build-base \
                     python-dev \
                     ncurses-dev \
@@ -20,7 +21,7 @@ RUN apk-install -t .build-deps \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
   && pip install --upgrade pip wheel setuptools \
   && echo "===> Installing Rekall..." \
-  && LDFLAGS=-L/lib pip install rekall==$REKALL_VERSION \
+  && pip install rekall==$REKALL_VERSION rekall-agent==$REKALL_VERSION \
   && rm -rf /tmp/* /root/.cache /var/cache/apk/* /var/tmp/* \
   && apk del --purge .build-deps
 
