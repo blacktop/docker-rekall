@@ -3,20 +3,20 @@ machine:
     - docker
 
 general:
-  build_dir: "1.5"
+  build_dir: "1.6"
 
 dependencies:
-  # pre:
-  #   - make circleci
+  cache_directories:
+    - "~/docker"
   override:
-    - make build
-  post:
-    - cp build/* $CIRCLE_ARTIFACTS
+    - docker info
+    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
+    - docker build -t blacktop_rekall .
+    - mkdir -p ~/docker; docker save blacktop_rekall > ~/docker/image.tar
 
 test:
   override:
-    - /bin/true
-
+    - docker run blacktop_rekall -h
 deployment:
   # master:
   #   branch: master

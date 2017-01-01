@@ -1,0 +1,12 @@
+# Ignore .git folder
+.git*
+
+README.md
+LICENSE
+*.vmem
+logo.png
+pslist_example.gif
+README.md.bu
+build
+release
+Makefile
