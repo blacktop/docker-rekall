@@ -1,7 +1,7 @@
 ![rekall-logo](https://github.com/blacktop/docker-rekall/raw/master/docs/logo.png) Dockerfile
 =============================================================================================
 
-[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-115.9 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
+[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-115.3 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
 
 This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic.com/index.html).
 
@@ -13,10 +13,10 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 ```bash
 REPOSITORY          TAG                 SIZE
-blacktop/rekall     latest              115.9 MB
-blacktop/rekall     1.6                 115.9 MB
-blacktop/rekall     w-gui               130.7 MB
-blacktop/rekall     1.5                 101.5 MB
+blacktop/rekall     latest              115.3 MB
+blacktop/rekall     1.6                 115.3 MB
+blacktop/rekall     w-gui               99.09 MB
+blacktop/rekall     1.5                 98.63 MB
 blacktop/rekall     profiles            1.972 GB
 ```
 
@@ -30,7 +30,7 @@ blacktop/rekall     profiles            1.972 GB
 ### Getting Started
 
 ```bash
-$ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.vmem pslist
+$ docker run --rm -v `pwd`:/data blacktop/rekall:1.5 -q --cache_dir /tmp -f silentbanker.vmem pslist
 ```
 
 ![pslist-example](https://github.com/blacktop/docker-rekall/raw/master/docs/pslist_example.gif)
@@ -40,7 +40,7 @@ $ docker run -it --rm -v /path/to/mem:/data:rw blacktop/rekall -f silentbanker.v
 #### Rekall GUI
 
 ```bash
- $ docker run -d -p 80:8000 -v /path/to/mem:/data:ro blacktop/rekall:w-gui webconsole --worksheet /tmp --host 0.0.0.0 --port 8000
+ $ docker run -d -p 80:8000 -v /path/to/mem:/data blacktop/rekall:w-gui webconsole --worksheet /tmp --host 0.0.0.0 --port 8000
 ```
 
 ![gui-home](https://github.com/blacktop/docker-rekall/raw/master/docs/gui-home.png)

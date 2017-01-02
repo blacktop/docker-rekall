@@ -33,8 +33,10 @@ RUN apk-install -t .build-deps \
 
 COPY rekallrc /root/.rekallrc
 
+ENV PATH /sbin:$PATH
+
 VOLUME ["/data"]
 WORKDIR /data
 
-ENTRYPOINT ["/sbin/tini","--","rekall"]
+ENTRYPOINT ["tini","--","rekall"]
 CMD ["-h"]
