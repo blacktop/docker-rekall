@@ -16,7 +16,7 @@ dependencies:
 
 test:
   override:
-    - docker run blacktop_rekall -h
+    - docker run blacktop_rekall --version
 deployment:
   # master:
   #   branch: master
