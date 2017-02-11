@@ -4,7 +4,7 @@ MAINTAINER blacktop, https://github.com/blacktop
 
 ENV REKALL_VERSION 1.6.0
 
-RUN apk-install py-setuptools py-cffi libstdc++ bash
+RUN apk-install py-setuptools py-cffi libstdc++ bash cabextract
 RUN apk-install -t .build-deps \
                     unzip \
                     py-pip \
@@ -19,7 +19,7 @@ RUN apk-install -t .build-deps \
   && set -x \
   && export PIP_NO_CACHE_DIR=off \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
-  && pip install --upgrade pip wheel setuptools \
+  && pip install --upgrade pip wheel setuptools pyparsing==2.1.5 \
   && echo "===> Installing Rekall..." \
   && pip install rekall==$REKALL_VERSION rekall-agent==$REKALL_VERSION \
   && echo "===> Installing rekall-profiles..." \

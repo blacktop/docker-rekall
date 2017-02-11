@@ -4,7 +4,7 @@ MAINTAINER blacktop, https://github.com/blacktop
 
 ENV REKALL_VERSION 1.5.3
 
-RUN apk-install py-setuptools py-cffi libstdc++ bash
+RUN apk-install py-setuptools py-cffi libstdc++ bash cabextract
 RUN apk-install -t .build-deps \
                     py-pip \
                     libc-dev \

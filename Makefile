@@ -3,6 +3,8 @@ NAME=rekall
 BUILD ?= 1.6
 LATEST ?= 1.6
 
+all: build size test
+
 build:
 	cd $(BUILD); docker build -t $(REPO)/$(NAME):$(BUILD) .
 
@@ -16,4 +18,7 @@ endif
 tags:
 	docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" $(REPO)/$(NAME)
 
-.PHONY: build size tags
+test:
+	docker run --rm $(REPO)/$(NAME):$(BUILD) --help
+
+.PHONY: build size tags test
