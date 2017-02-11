@@ -7,7 +7,7 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 ### Dependencies
 
--	[blacktop/yara:3.4](https://registry.hub.docker.com/u/blacktop/yara/)
+-	[blacktop/yara:3.5](https://registry.hub.docker.com/u/blacktop/yara/)
 
 ### Image Tags
 
