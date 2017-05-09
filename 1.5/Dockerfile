@@ -1,11 +1,11 @@
 FROM blacktop/yara:3.5
 
-MAINTAINER blacktop, https://github.com/blacktop
+LABEL maintainer "https://github.com/blacktop"
 
 ENV REKALL_VERSION 1.5.3
 
-RUN apk-install py-setuptools py-cffi libstdc++ bash cabextract
-RUN apk-install -t .build-deps \
+RUN apk add --no-cache py-setuptools py-cffi libstdc++ bash cabextract
+RUN apk add --no-cache -t .build-deps \
                     py-pip \
                     libc-dev \
                     build-base \
