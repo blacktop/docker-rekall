@@ -1,7 +1,7 @@
 ![rekall-logo](https://github.com/blacktop/docker-rekall/raw/master/docs/logo.png) Dockerfile
 =============================================================================================
 
-[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker image-119 MB-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
+[![CircleCI](https://circleci.com/gh/blacktop/docker-rekall.png?style=shield)](https://circleci.com/gh/blacktop/docker-rekall) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/rekall.svg)](https://hub.docker.com/r/blacktop/rekall/) [![Docker Image](https://img.shields.io/badge/docker%20image-131-blue.svg)](https://hub.docker.com/r/blacktop/rekall/)
 
 This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic.com/index.html).
 
@@ -13,8 +13,8 @@ This repository contains a **Dockerfile** of [Rekall](http://www.rekall-forensic
 
 ```bash
 REPOSITORY          TAG                 SIZE
-blacktop/rekall     latest              119 MB
-blacktop/rekall     1.6                 119 MB
+blacktop/rekall     latest              131 MB
+blacktop/rekall     1.6                 131 MB
 blacktop/rekall     w-gui               102 MB
 blacktop/rekall     1.5                 102 MB
 blacktop/rekall     profiles            1.972 GB

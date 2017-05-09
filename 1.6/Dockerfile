@@ -1,20 +1,20 @@
 FROM blacktop/yara:3.5
 
-MAINTAINER blacktop, https://github.com/blacktop
+LABEL maintainer "https://github.com/blacktop"
 
 ENV REKALL_VERSION 1.6.0
 
-RUN apk-install py-setuptools py-cffi libstdc++ bash cabextract
-RUN apk-install -t .build-deps \
-                    py-pip \
-                    libc-dev \
-                    build-base \
-                    python-dev \
-                    ncurses-dev \
-                    openssl-dev \
-                    readline-dev \
-                    linux-headers \
-                    ca-certificates \
+RUN apk add --no-cache py-setuptools py-cffi libstdc++ bash cabextract
+RUN apk add --no-cache -t .build-deps \
+                          py-pip \
+                          libc-dev \
+                          build-base \
+                          python-dev \
+                          ncurses-dev \
+                          openssl-dev \
+                          readline-dev \
+                          linux-headers \
+                          ca-certificates \
   && set -x \
   && export PIP_NO_CACHE_DIR=off \
   && export PIP_DISABLE_PIP_VERSION_CHECK=on \
